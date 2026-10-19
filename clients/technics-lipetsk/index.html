@@ -211,16 +211,59 @@ footer a{color:#cfd8ea}
 .why-item .qa{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
 .logo-img{gap:12px}.logo-img img{height:50px;width:auto;display:block}.logo-img small{border-left:1px solid var(--line);padding-left:12px;line-height:1.3}
 @media (max-width:640px){.logo-img small{display:none}.logo-img img{height:34px}}
+/* владелец (демо) */
+.owner{background:#fff4d6;border-bottom:1px solid #f2d27a}
+.owner .wrap{display:flex;align-items:center;gap:18px;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+.owner p{margin:0;font-size:15px;color:#4a3500}.owner .onote{display:block;font-size:13px;color:#7a5a10;margin-top:2px}
+.owner .btn{padding:10px 18px;font-size:15px;white-space:nowrap}
+@media (max-width:640px){.owner .wrap{flex-direction:column;align-items:stretch}.owner .btn{text-align:center}}
+/* тарифы */
+.tariffs{background:linear-gradient(180deg,#f6f7fa,#eef2fb)}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.tier{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+.tier.feat{border:2px solid var(--blue);transform:translateY(-6px)}
+.tier.cur{outline:3px solid var(--accent);outline-offset:2px}
+.tbadge{position:absolute;top:-13px;left:24px;background:var(--blue);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;letter-spacing:.04em}
+.tier h3{margin:0 0 6px;font-size:20px}
+.tprice{font-size:36px;font-weight:800;letter-spacing:-.02em;color:var(--blue)}
+.tterm{font-size:14px;color:var(--muted);margin-bottom:14px}
+.tier ul{margin:0 0 16px;padding:0;list-style:none;font-size:15px;flex:1}
+.tier li{padding:7px 0 7px 24px;border-top:1px dashed var(--line);position:relative}
+.tier li:before{content:"✓";position:absolute;left:2px;color:var(--ok);font-weight:800}
+.tier li:first-child{border-top:0}
+.tcur{display:inline-block;background:#fff4d6;color:#7a5200;border-radius:10px;padding:6px 10px;font-size:13px;font-weight:700}
+.tlink{color:var(--blue-2);font-weight:700;text-decoration:none;font-size:15px}
+.tterms{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:6px 28px;font-size:15px;color:var(--muted)}
+.tterms p{margin:0}.tterms .t10{grid-column:1/-1;margin-top:8px;color:var(--ink);font-weight:700}
+@media (max-width:960px){.t-grid{grid-template-columns:1fr}.tier.feat{transform:none}.tterms{grid-template-columns:1fr}}
+/* многостраничник */
+.nav a.act{color:var(--blue)}
+.ptitle{padding:56px 0 28px;background:#fff;border-bottom:1px solid var(--line);margin-bottom:56px}
+.ptitle h1{font-size:clamp(30px,4vw,44px);letter-spacing:-.025em;line-height:1.1;margin:10px 0 10px}
+.ptitle .sub{margin:0}
+.ptable{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;max-width:720px}
+.prow{display:flex;justify-content:space-between;gap:16px;padding:14px 20px;border-top:1px solid var(--line)}.prow:first-child{border-top:0}
+.prow b{color:var(--blue);white-space:nowrap}
+.wlist{padding-left:20px;font-size:17px}.wlist li{margin:8px 0}
+.wcta{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:var(--shadow)}.wcta h3{margin:0 0 8px}
+.wcard{text-decoration:none;display:block}.wcard p{color:var(--muted);font-size:15px;margin:0 0 12px}
+.gallery.gfull{grid-template-columns:repeat(4,1fr);grid-auto-rows:200px}.gallery.gfull figure:first-child{grid-row:auto}
+@media (max-width:960px){.gallery.gfull{grid-template-columns:1fr 1fr}.gallery.gfull figure:first-child{grid-column:auto}}
 </style>
 </head><body>
 
+
 <div class="demo"><b>Демо-версия</b> страницы для автосервиса Technics (Липецк). Факты, фото и отзывы — с открытых карточек Яндекс.Карт и 2ГИС на 19.10.2026. Поля <span class="todo">уточнить</span> заполняются со слов владельца.</div>
+
+<div class="owner"><div class="wrap"><p><b>Technics, это ваш сайт.</b> Он уже собран по вашей карточке на Яндекс.Картах. Оставить его на своём адресе — от 7 000 ₽, оплата после запуска. <span class="onote">По запросу «Technics Липецк» сейчас открывается сайт другой компании — lip.technics-fix.ru.</span></p><a class="btn btn-primary" href="#tariffs">Хочу оставить →</a></div></div>
+
 
 <header class="top"><div class="wrap">
 <a class="logo logo-img" href="#"><img src="img/logo-dark.svg" alt="Technics" height="40"><small>сервис VAG · Липецк</small></a>
 <nav class="nav"><a href="#services">Услуги</a><a href="#brands">Марки</a><a href="#photos">Фото</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>
 <a class="btn btn-blue" href="tel:+79050433626">+7 (905) 043-36-26</a>
 </div></header>
+
 
 <section class="hero"><div class="wrap"><div>
 <span class="chip">🔧 Audi · Volkswagen · Škoda · SEAT · Porsche</span>
@@ -238,6 +281,7 @@ footer a{color:#cfd8ea}
 <div><span class="ico">💳</span><p style="margin:0"><b>Оплата картой</b><span>Туалет</span></p></div>
 </div></div></div></section>
 
+
 <section id="services"><div class="wrap"><div class="kicker">Что делаем</div><h2>Услуги автосервиса</h2><p class="sub">Список работ — как он указан на карточке сервиса. Не нашли свою поломку — позвоните, подскажем.</p><div class="svc-grid">
 <div class="svc hl"><div class="ico">⚙️</div><h3>Коробки передач</h3><ul><li>Ремонт DSG</li><li>Ремонт АКПП</li><li>Ремонт механической КПП</li></ul></div>
 <div class="svc"><div class="ico">🔥</div><h3>Двигатель</h3><ul><li>Ремонт двигателя</li><li>Замена ГРМ</li><li>Эндоскопия двигателя</li><li>Чистка форсунок, промывка инжектора</li></ul></div>
@@ -250,6 +294,7 @@ footer a{color:#cfd8ea}
 <div class="feat"><span>Студия тюнинга — рубрика на карточке, уточнить, что входит</span></div>
 </div></section>
 
+
 <section id="brands" style="padding-top:0"><div class="wrap split"><div><div class="kicker">Какие машины</div>
 <h2>Работаем с группой VAG и Porsche</h2>
 <p class="sub" style="margin-bottom:24px">Марки указаны на карточке сервиса. Узкая специализация — значит, знакомые болезни, нужное оборудование и опыт именно с вашей машиной.</p>
@@ -257,11 +302,13 @@ footer a{color:#cfd8ea}
 <div><div class="photo-frame"><img src="img/brands.jpg" alt="Фасад автосервиса Technics" loading="lazy"></div><div class="cap">Фото с карточки Яндекс.Карт</div></div>
 </div></section>
 
+
 <section class="why"><div class="wrap"><div class="kicker">Почему выбирают</div><h2>Что отмечают клиенты</h2><p class="sub">По разбору отзывов на Яндекс.Картах.</p><div class="why-grid">
 <div class="why-item"><div class="n">95%</div><p>положительных отзывов о персонале</p><q>Компетентные, доброжелательные сотрудники.</q><span class="qa">— Надежда Муровлянникова, 2 августа</span></div>
 <div class="why-item"><div class="n">90%</div><p>положительных отзывов о ремонте</p><q>Быстро нашли причину поломки, озвучили более чем адекватный ценник и отремонтировали авто.</q><span class="qa">— Надежда Муровлянникова, 2 августа</span></div>
 <div class="why-item"><div class="n">95%</div><p>положительных отзывов о времени ожидания</p><q>Соблюдают все договоренности, включая сроки.</q><span class="qa">— Алексей Ш., 26 декабря 2024, Яндекс.Карты</span></div>
 </div></div></section>
+
 
 <section id="photos"><div class="wrap"><div class="kicker">Фото</div><h2>Как выглядит сервис</h2><p class="sub">Снимки с карточки Яндекс.Карт. <span class="todo">уточнить: свежие фото бокса, мастеров и зоны ожидания</span></p><div class="gallery">
 <figure><img src="img/facade.jpg" alt="Здание автосервиса Technics" loading="lazy"></figure>
@@ -270,6 +317,7 @@ footer a{color:#cfd8ea}
 <figure><img src="img/entrance.jpg" alt="Вход в автосервис" loading="lazy"></figure>
 <figure><img src="img/parking.jpg" alt="Подъезд и парковка у сервиса" loading="lazy"></figure>
 </div></div></section>
+
 
 <section id="reviews" style="background:#fff"><div class="wrap"><div class="kicker">Отзывы</div><h2>Что пишут на Яндекс.Картах</h2><div class="rev-head">
 <div class="big-score"><div class="score">4,9</div><div><div class="stars">★★★★★</div><div style="color:var(--muted);font-size:14px">191 оценка · 90 отзывов</div></div></div>
@@ -287,6 +335,8 @@ footer a{color:#cfd8ea}
 <div class="rev"><div class="who"><span class="ava">А</span><p style="margin:0"><b>Александр</b><span>4 января 2025</span></p></div><p>«Вообще не понимаю как так можно было сделать, додуматся на коробке dsg прилепить болт на герметик не выкрутив обломок, просто приклеить болт к корпусу коробки а потом говорить мы гарантии не даём»</p><div class="src">★☆☆☆☆ · Яндекс.Карты</div></div>
 </div><p class="cap" style="font-size:13px">Цитаты приведены дословно и целиком. Подборка, включая критические отзывы; полный список — по ссылке на карточку выше.</p></div></section>
 
+
+
 <section id="contacts" class="contact"><div class="wrap"><div class="kicker" style="color:var(--accent)">Контакты</div>
 <h2>Запишитесь на диагностику</h2><p class="sub">Позвоните, опишите симптомы и модель — подберём время. </p>
 <div class="c-grid"><div class="c-card"><div class="info">
@@ -296,6 +346,7 @@ footer a{color:#cfd8ea}
 </div><div class="btns"><a class="btn btn-primary" href="tel:+79050433626">📞 Позвонить</a><a class="btn btn-ghost" href="https://yandex.ru/maps/?rtext=~52.624377,39.621753&amp;rtt=auto" target="_blank" rel="noopener">🧭 Маршрут в Яндекс.Картах</a><a class="btn btn-ghost" href="https://2gis.ru/lipetsk/firm/70000001066520309" target="_blank" rel="noopener">Открыть в 2ГИС</a><span class="ph">WhatsApp / Telegram / Max — в карточке не указаны · <b>уточнить у владельца</b></span><span class="ph">Онлайн-запись (на картах есть связь с YCLIENTS) — уточнить, подключать ли кнопку</span></div></div>
 <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=39.621753%2C52.624377&amp;z=16&amp;pt=39.621753%2C52.624377%2Cpm2blm&amp;oid=16875737746&amp;ol=biz" title="Technics на Яндекс.Картах" loading="lazy" allowfullscreen></iframe></div>
 </div></div></section>
+<section id="tariffs" class="tariffs"><div class="wrap"><div class="kicker">Сколько стоит оставить сайт</div><h2>Сайт уже собран. Осталось решить, в каком объёме его оставить</h2><p class="sub">Студии Липецка берут от 40 000 ₽ и несколько недель. Здесь сайт уже собран.</p><div class="t-grid"><div class="tier"><h3>Страница</h3><div class="tprice">7 000 ₽</div><div class="tterm">на следующий день после «да»</div><ul><li>Эта страница на вашем адресе .ru</li><li>Телефон и маршрут в одно касание, карта, часы</li><li>Работы, марки, отзывы и фото с вашей карточки</li><li>Знак с вывески, если есть фото</li><li>WhatsApp / Telegram — если ссылка есть на карточке</li><li>Домен, хостинг и https на год</li><li>3 правки фактов</li></ul><a class="tlink" href="https://torero-parts.github.io/sto-sites/clients/sample/" target="_blank" rel="noopener">Посмотреть образец →</a></div><div class="tier feat"><span class="tbadge">Основной</span><h3>Сайт сервиса</h3><div class="tprice">12 000 ₽</div><div class="tterm">за 2–3 дня</div><ul><li>Всё из «Страницы»</li><li>4 страницы: главная, услуги, отзывы, контакты</li><li>Цены «от» на работы — когда вы дадите цифры</li><li>Кнопка записи — если запись уже есть на карточке</li><li>Яндекс.Метрика и отчёт через 30 дней</li><li>3 круга правок</li></ul><a class="tlink" href="https://torero-parts.github.io/sto-sites/clients/sample-mini/" target="_blank" rel="noopener">Посмотреть образец →</a></div><div class="tier"><h3>Сайт с работами</h3><div class="tprice">20 000 ₽</div><div class="tterm">до 5 дней</div><ul><li>Всё из «Сайта сервиса»</li><li>До 5 отдельных страниц под работы с карточки (например, DSG, ТО, электрика)</li><li>Галерея фото</li><li>Каждая работа ищется отдельно: «ремонт DSG Липецк»</li><li>3 круга правок</li></ul><a class="tlink" href="https://torero-parts.github.io/sto-sites/clients/sample-plus/" target="_blank" rel="noopener">Посмотреть образец →</a></div></div><div class="tterms"><p>✓ Оплата после того, как сайт открылся на вашем адресе. До вашего «да» домен не покупаем.</p><p>✓ Правки цен и часов 30 дней после запуска — бесплатно, дальше 500 ₽ за правку.</p><p>✓ Со второго года — 3 500 ₽ в год за домен и хостинг.</p><p>✓ Реклама, боты и абонентская плата не входят и не навязываются.</p><p class="t10">🎁 Первым десяти сервисам, которые скажут «да», — табличка с QR-кодом на ворота.</p></div></div></section>
 <footer><div class="wrap"><div><img src="img/logo.svg" alt="Technics" style="height:34px;display:block;margin-bottom:8px"><b style="color:#fff">Technics</b> — автосервис, Липецк, ул. Клары Цеткин, вл33 · <a href="tel:+79050433626">+7 (905) 043-36-26</a></div>
 <div>Демо-страница. Данные: <a href="https://yandex.ru/maps/org/technics/16875737746/" target="_blank" rel="noopener">Яндекс.Карты</a>, <a href="https://2gis.ru/lipetsk/firm/70000001066520309" target="_blank" rel="noopener">2ГИС</a> · 19.10.2026</div></div></footer>
 <div class="mbar"><a class="btn btn-primary" href="tel:+79050433626">📞 Позвонить</a><a class="btn btn-blue" href="https://yandex.ru/maps/?rtext=~52.624377,39.621753&amp;rtt=auto" target="_blank" rel="noopener">🧭 Маршрут</a></div>
