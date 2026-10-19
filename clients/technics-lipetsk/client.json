@@ -8,6 +8,11 @@
   "slug": "technics-lipetsk",
   "name": "Technics",
   "tagline": "сервис VAG · Липецк",
+  "logo": {
+    "light_bg": "img/logo-dark.svg",
+    "dark_bg": "img/logo.svg",
+    "source": "обводка вывески на здании (фото с карточки Яндекс.Карт и фото Сергея)"
+  },
   "city": "Липецк",
   "h1": "Ремонт и обслуживание <span>VAG и Porsche</span> в Липецке",
   "title": "Technics — ремонт Audi, VW, Škoda, SEAT, Porsche в Липецке · DSG, диагностика, ТО",
