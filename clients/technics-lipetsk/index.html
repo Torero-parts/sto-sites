@@ -148,7 +148,7 @@ h2{font-size:clamp(28px,3.4vw,40px);letter-spacing:-.025em;line-height:1.1;margi
 .feat span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600}
 /* why */
 .why{background:#fff}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
 .why-item{padding:24px;border-radius:var(--r);background:var(--bg)}
 .why-item .n{font-size:34px;font-weight:800;color:var(--blue);letter-spacing:-.02em}
 .why-item p{margin:6px 0 0;color:var(--muted);font-size:15px}
@@ -208,6 +208,7 @@ footer a{color:#cfd8ea}
 }
 .gallery figure.phf{display:grid;place-items:center;background:repeating-linear-gradient(135deg,#e8eefc 0 14px,#dfe7fa 14px 28px);border:1.5px dashed #9fb3e6;color:#123a8f;font-weight:700}
 .hero{background-color:#0a1f52}
+.why-item .qa{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
 </style>
 </head><body>
 
@@ -232,7 +233,7 @@ footer a{color:#cfd8ea}
 <div><span class="ico">📍</span><p style="margin:0"><b>ул. Клары Цеткин, вл33</b><span>Липецк, Правобережный округ, м-н Студёнки</span></p></div>
 <div><span class="ico">🕘</span><p style="margin:0"><b>Пн–пт 09:00–18:00 <em id="status" class="open"></em></b><span>Сб, вс — выходной</span></p></div>
 <div><span class="ico">📞</span><p style="margin:0"><b><a href="tel:+79050433626" style="text-decoration:none">+7 (905) 043-36-26</a></b><span>Запись, вопросы по ремонту и запчастям</span></p></div>
-<div><span class="ico">💳</span><p style="margin:0"><b>Оплата картой</b><span>Туалет / зона ожидания</span></p></div>
+<div><span class="ico">💳</span><p style="margin:0"><b>Оплата картой</b><span>Туалет</span></p></div>
 </div></div></div></section>
 
 <section id="services"><div class="wrap"><div class="kicker">Что делаем</div><h2>Услуги автосервиса</h2><p class="sub">Список работ — как он указан на карточке сервиса. Не нашли свою поломку — позвоните, подскажем.</p><div class="svc-grid">
@@ -243,7 +244,7 @@ footer a{color:#cfd8ea}
 <div class="svc"><div class="ico">🛞</div><h3>Ходовая и тормоза</h3><ul><li>Ремонт ходовой</li><li>Ремонт тормозной системы</li><li>Развал-схождение</li></ul></div>
 <div class="svc"><div class="ico">🧰</div><h3>Выхлоп и оборудование</h3><ul><li>Ремонт выхлопной системы</li><li>Удаление катализаторов</li><li>Установка парктроников и доп. оборудования</li></ul></div>
 </div>
-<div class="price-note">💬 <b>Цены.</b> Стоимость зависит от модели и диагностики, точную цифру скажем по телефону. <span class="todo">уточнить: прайс на популярные работы (ТО, масло DSG, диагностика) — по желанию владельца</span></div>
+<div class="price-note">💬 <b>Цены.</b> Прайс на карточке не опубликован. <span class="todo">уточнить: прайс на популярные работы (ТО, масло DSG, диагностика) — по желанию владельца</span></div>
 <div class="feat"><span>Студия тюнинга — рубрика на карточке, уточнить, что входит</span></div>
 </div></section>
 
@@ -255,10 +256,9 @@ footer a{color:#cfd8ea}
 </div></section>
 
 <section class="why"><div class="wrap"><div class="kicker">Почему выбирают</div><h2>Что отмечают клиенты</h2><p class="sub">По разбору отзывов на Яндекс.Картах.</p><div class="why-grid">
-<div class="why-item"><div class="n">95%</div><p>положительных отзывов о персонале</p><q>Компетентные, доброжелательные сотрудники.</q></div>
-<div class="why-item"><div class="n">90%</div><p>положительных отзывов о ремонте</p><q>Быстро нашли причину поломки, озвучили более чем адекватный ценник и отремонтировали авто.</q></div>
-<div class="why-item"><div class="n">95%</div><p>положительных отзывов о времени ожидания</p><q>Соблюдают все договоренности, включая сроки.</q></div>
-<div class="why-item"><div class="n">5</div><p>подъёмников, чистый и светлый бокс — по словам клиента</p><q>Внутри все чистенько и светло, 5 подьемников.</q></div>
+<div class="why-item"><div class="n">95%</div><p>положительных отзывов о персонале</p><q>Компетентные, доброжелательные сотрудники.</q><span class="qa">— Надежда Муровлянникова, 2 августа</span></div>
+<div class="why-item"><div class="n">90%</div><p>положительных отзывов о ремонте</p><q>Быстро нашли причину поломки, озвучили более чем адекватный ценник и отремонтировали авто.</q><span class="qa">— Надежда Муровлянникова, 2 августа</span></div>
+<div class="why-item"><div class="n">95%</div><p>положительных отзывов о времени ожидания</p><q>Соблюдают все договоренности, включая сроки.</q><span class="qa">— Алексей Ш., 26 декабря 2024, Яндекс.Карты</span></div>
 </div></div></section>
 
 <section id="photos"><div class="wrap"><div class="kicker">Фото</div><h2>Как выглядит сервис</h2><p class="sub">Снимки с карточки Яндекс.Карт. <span class="todo">уточнить: свежие фото бокса, мастеров и зоны ожидания</span></p><div class="gallery">
